@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option Pricing and Implied Volatility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Option Pricing & Implied Volatility Calculator</h1>
+
+        <div class="form-container">
+            <form id="optionForm">
+                <label for="stockTicker">Stock Ticker:</label>
+                <input type="text" id="stockTicker" name="stockTicker" placeholder="AAPL">
+
+                <label for="strikePrice">Strike Price:</label>
+                <input type="number" id="strikePrice" name="strikePrice" step="0.01">
+
+                <label for="maturity">Time to Maturity (weeks):</label>
+                <input type="number" id="maturity" name="maturity" step="0.01">
+
+                <label for="choice">Choose Calculation:</label>
+                <select id="choice" name="choice">
+                    <option value="1">Option Price</option>
+                    <option value="2">Implied Volatility</option>
+                </select>
+
+                <div id="volatilitySelection">
+                    <label for="volChoice">Choose Volatility:</label>
+                    <select id="volChoice" name="volChoice">
+                        <option value="1">Historical Volatility</option>
+                        <option value="2">Implied Volatility</option>
+                    </select>
+                </div>
+
+                <label for="marketPrice">Market Option Price (for Implied Volatility):</label>
+                <input type="number" id="marketPrice" name="marketPrice" step="0.01">
+
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+
+        <div class="results-container">
+            <h2>Results</h2>
+            <div id="optionPriceResult">
+                <h3>Option Price</h3>
+                <p id="callOptionPrice">Call Option Price (Black-Scholes): </p>
+                <p id="putOptionPrice">Put Option Price (Black-Scholes): </p>
+                <p id="callOptionMC">Call Option Price (Monte Carlo): </p>
+                <p id="putOptionMC">Put Option Price (Monte Carlo): </p>
+            </div>
+
+            <div id="volatilityResult">
+                <h3>Implied Volatility</h3>
+                <p id="impliedVolatility">Implied Volatility: </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
