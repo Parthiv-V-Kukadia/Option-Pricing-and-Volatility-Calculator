@@ -40,6 +40,8 @@ python option_pricing.py
             * The script will then calculate and display the implied volatility.
 
 ## Example Usage
+To run the script, execute `python option_pricing.py` in your terminal. You will be prompted to enter the required information:
+```
 Enter the stock ticker symbol (e.g., AAPL): AAPL
 [Prints historical stock data and displays a chart]
 Current stock price: 170.34
@@ -53,9 +55,10 @@ Call Option Price (Black-Scholes): 3.47
 Put Option Price (Black-Scholes): 8.09
 Call Option Price (Monte Carlo): 3.58
 Put Option Price (Monte Carlo): 8.19
+```
 
-OR:
-
+Alternatively, to calculate implied volatility:
+```
 Enter the stock ticker symbol (e.g., AAPL): AAPL
 [Prints historical stock data and displays a chart]
 Current stock price: 170.34
@@ -66,6 +69,7 @@ Do you want to calculate the (1) option price or (2) implied volatility? Enter 1
 Is this for a (1) Call option or (2) Put option? Enter 1 or 2: 1
 Enter the market price of the option: 4.50
 Implied Volatility: 25.67%
+```
 
 ## Notes
 * The historical volatility calculation is based on a simplified approach that considers different time frames relative to the option's maturity.
